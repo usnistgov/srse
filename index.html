@@ -1542,7 +1542,7 @@ div.tocify {
 
 
 
-<h1 class="title toc-ignore">SRTE Speaker Recognition Technology Evaluation (SRTE) 2024</h1>
+<h1 class="title toc-ignore">Speaker Recognition Sequestered Evaluation (SRSE) 2024</h1>
 
 </div>
 
@@ -1925,8 +1925,8 @@ _setUpTrackersIfReady()||(document.addEventListener?document.addEventListener("D
 Status
 </h2>
 <p></summary></p>
-<p><b>[2024-01-24]</b>
-The Speaker Recognition Technology Evaluation (SRTE) 2024 activity is being conducted to assess the capability and performance level of
+<p><b>[2024-02-14]</b>
+The Speaker Recognition Sequestered Evaluation (SRSE) 2024 activity is being conducted to assess the capability and performance level of
 speaker recognition system in purpose desgined scenarios.
 A <a href="https://pages.nist.gov/frvt/api/frte_five_api_draft.pdf">draft evaluation plan</a> is now available for public comment until 2024-02-29.</p>
 </details>
@@ -1934,12 +1934,12 @@ A <a href="https://pages.nist.gov/frvt/api/frte_five_api_draft.pdf">draft evalua
 <details open>
 <summary>
 <h2>
-Introduction
+Overview
 </h2>
 <p></summary>
-  The SRTE series will be structured so as to present the systems with speaker identification tasks and conditions that allow assessment of their capabilities and performance levels in various purpose designed scenarios. Therefore the sequestered data may reflect the variability of vocal effort levels, stress levels, transmission channels, microphones, noise levels and types, and collection conditions similar to those encountered in actual operational scenarios.
+  Due to renewed interest in the U.S. Government Community, in 2024 NIST will conduct a Speaker Recognition Sequestered Evaluation (SRSE) pilot that will mark the beginning of a recurring series of SRSE evaluations. Due to its inaugural nature the participation in the SRSE 2024 pilot is by invitation only.
   <br><br>
-  The 2024 pilot evaluation may include, but is not limited to training and test conditions of conversational telephone speech, various telephone channels, and conversational interview speech recorded over room microphones. Various noise types and levels may also be present in the speech samples. The target/non-target trials will present both matches and mismatches of the speech styles, telephony channels, microphone channels, noise, and other conditions.
+  Subsequent evaluations in the series will be open to the broader community of participants and will use data new to the community and will proceed either annually or on a rolling basis. The participants shall provide their algorithms in a containerized form, that have potential to be deployed into biometric workflows for operational speaker recognition applications. A key difference of this new evaluation series is the use of sequestered data, which will remain inaccessible to participants during and after the evaluation. Accordingly, the participants are required to submit their containerized algorithms in a self-contained, containerized executable form (that does not rely on external cloud resources) along with all required state data, parameters, and dependencies needed for execution in a sequestered (air-gaped) environment. The participating systems must operate under a defined interface protocol that allows the NIST evaluators to control their initialization parameters, enrolment, target/non-target test trials, and the disposition of their outputs. Moreover, the executable system submissions must be compatible with the SRSE evaluation hardware and its software environment. The SRSE is structured so as to present the participants with speaker identification tasks and conditions that allow assessment of their algorithm capabilities and performance levels in various purpose designed scenarios.
 </p>
 </details>
 <hr />
@@ -1949,42 +1949,29 @@ Introduction
 How to Participate
 </h2>
 <p></summary>
-To participate in this evaluation, developers need to submit a participation
-agreement to NIST, run their system through the provided validation package, encrypt the package, provide a download link for the encrypted submission package. Participants must submit a containerized self contained system compliant with the operation under the control of the NIST test harness as described in XXX. Systems failing to conform to these requirement will be deemed as unqualified to particiate. More details are provided below.</p>
-
-<div id="participation-agreement" class="section level3">
-<h3>Participation Agreement</h3>
-<p>SRTE 2024 is conducted by NIST, an agency of the United States Government. Participation is free of charge. Due to its inaugural nature the participation in the SRTE 2024 pilot is by invitiation only. All organizations who participate in SRTE 2024 must sign all pages of this <a href="https://pages.nist.gov/frvt/agreements/frvt_participation_agreement.pdf">Participation Agreement</a> and submit it with their system submission using the <a href="https://pages.nist.gov/frvt/html/frvt_submission_form.html">Submission Form</a>. [last update: 2024-01-24]</p>
-</div>
+To participate in this evaluation, developers need to: 
+<ul>
+  <li>Submit a <a href="">signed participation agreement</a> to NIST via srse@nist.gov</li>
+  <li>Containerize their algorithms in compliance with the evaluation infrastructure as described in the <a href="">evaluation plan</a></li>
+  <li>Encrypt the container and provide a download link for the encrypted submission package. More details are provided below and in the <a href="">evaluation plan</a></li>
+</ul>
+</p>
 
 <div id="validation" class="section level3">
 <h3>Validation</h3>
-<p>A <a href="https://github.com/usnistgov/frvt">validation package</a> will be published.
-All participants must run their system through the validation package
-prior to submission. The purpose of validation is to ensure consistent
-system output between your execution and NIST’s execution.
-[last update: 2024-01-24]</p>
-</div>
-
-<div id="encryption" class="section level3">
-<h3>Encryption</h3>
-<p>All submissions must be properly encrypted and signed before transmission to
-NIST. This must be done according to these
-<a href="https://www.nist.gov/system/files/documents/2021/10/25/nist_encryption.pdf">instructions</a> using the
-SRTE Ongoing public key linked from this
-<a href="https://www.nist.gov/itl/iad/image-group/products-and-services/encrypting-softwaredata-transmission-nist">page</a>.
-Participants must email their public key to NIST. The participant’s public key
-must correspond to the participant’s public-key fingerprint provided on the
-signed Participation Application. [last update: 2024-01-24]</p>
+<p>Instructions on the download of the validation dataset will be provided in this section. All participants must run their containers against the validation set prior to submission to confirm proper function. NIST will run the submission containers against the same validation dataset to confirm proper execution on NIST infrastructure. The purpose of validation is to ensure consistent algorithm output between participant’s execution and NIST’s execution.
+  <br><br>
+  Instructions to download the validation data set – [TBD]
+[last update: 2024-02-14]</p>
 </div>
 
 <div id="submission" class="section level3">
 <h3>Submission</h3>
-<p>All algorithm submissions must be submitted through the <a href="https://pages.nist.gov/frvt/html/frvt_submission_form.html">Submission Form</a>, which requires encrypted files be provided as a download link from a generic http server (e.g., Google Drive). We cannot accept Dropbox links. NIST will not register, or establish any kind of membership, on the provided website. Participants can submit their algorithm(s), participation agreement, and GPG key at the same time via the submission form. [last update: 2024-01-29]</p>
-<p>Participants must <a href="mailto:frvt-news+subscribe@list.nist.gov">subscribe</a> to the FRTE/FATE mailing list to receive emails when new reports are published or announcements are made.</p>
+<p>All containerized algorithm submissions must be submitted through the <a href="https://docs.google.com/forms/d/116o1mVU6C9Uw4KmfERGje8B3s2c_d7g3i7K9xuLfWXY/edit?ts=65cbd26f">SRSE Submission Form</a>, which requires encrypted files be provided as a download link from a generic http server (e.g., Google Drive). NIST cannot accept Dropbox links. NIST will not register, or establish any kind of membership, on the provided website. [last update: 2024-02-14]</p>
+</div>
 </details>
-<hr />
 
+<!--
 <details open>
 <summary>
 <h2>
@@ -1993,6 +1980,8 @@ Metrics
 <p></summary>
   The SRTE 2024 evaluation metrics will include Detection Cost Functions (DCF's) minimized over the test speech samples. One will incorporate error cost parameters tuned to reflect a forensic cost function that strongly penalizes false alarms, and another will be tuned to investigative scenarios which more strongly penalize misses. Additional specific metrics such as the Detection Error Trade-off (DET) curve, equal error rate, and area under ROC curve (AUROC), may also be used to assess performance relative to particular requirements. Further detail with respect to metrics is provided in <a href="https://pages.nist.gov/frvt/api/frte_five_api_draft.pdf">draft evaluation plan</a>. </p>
 </details>
+-->
+
 <hr />
 <details open>
 <summary>
@@ -2000,25 +1989,16 @@ Metrics
 Contact Information
 </h2>
 <p></summary>
-Inquiries and comments may be submitted to <a href="mailto:srte@nist.gov">srte@nist.gov</a>.</p>
-<a href="mailto:srte-news+subscribe@list.nist.gov">Subscribe</a> to the evaluation mailing list to receive emails when announcements or updates are made.
+Inquiries and comments may be submitted to <a href="mailto:srse@nist.gov">srse@nist.gov</a>.</p>
+
+<div id="submission" class="section level3">
+<h3>Subscribe</h3>
+<p>Instructions on how to join our mailing list will be provided in this section once the mailing list is established.</p>
+</div>
+
 </details>
 <hr />
 
-<details open>
-<summary>
-<h2>
-Acknowledgements
-</h2>
-</summary>
-This research is based upon work supported in part by XXXX, XXXX.
-</details>
-
-<h2>
-Related NIST Projects
-</h2>
-<h5>
-<a href="https://www.nist.gov/programs-projects/face-recognition-vendor-test-frvt-ongoing">Ongoing Evaluations</a>
 
 <p><br></p>
 <div class="tocify-extend-page" data-unique="tocify-extend-page" style="height: 0;">
